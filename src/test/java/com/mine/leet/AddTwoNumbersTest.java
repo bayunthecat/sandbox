@@ -1,5 +1,7 @@
-package com.mine.leet.two;
+package com.mine.leet;
 
+import com.mine.leet.AddTwoNumbers;
+import com.mine.leet.util.ListNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -7,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class AddTwoNumbersTest {
 
     private AddTwoNumbers subject = new AddTwoNumbers();
+
 
     @Test
     void test_1() {

@@ -1,4 +1,4 @@
-package com.mine.leet.two;
+package com.mine.leet.util;
 
 public class ListNode {
 

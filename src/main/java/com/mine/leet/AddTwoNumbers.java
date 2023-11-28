@@ -1,4 +1,6 @@
-package com.mine.leet.two;
+package com.mine.leet;
+
+import com.mine.leet.util.ListNode;
 
 public class AddTwoNumbers {
 
