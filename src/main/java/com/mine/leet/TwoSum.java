@@ -1,4 +1,4 @@
-package com.mine;
+package com.mine.leet;
 
 import java.util.HashMap;
 
