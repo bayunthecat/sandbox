@@ -31,4 +31,8 @@ public class PeakFinder {
         } while (divided.length != 1);
         return result;
     }
+
+    public int[] findAPeak(int[][] array) {
+        return new int[] {0, 0};
+    }
 }

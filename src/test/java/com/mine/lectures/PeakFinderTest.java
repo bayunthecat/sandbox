@@ -28,4 +28,28 @@ class PeakFinderTest {
         assertThat(subject.fundAPeakCycle(new int[] {-1, 11, 10, 9, 8, 7, 6, 5, -11})).isEqualTo(1);
     }
 
+    @Test
+    void test2d_1() {
+        int[][] array = new int[][] {
+                {0, 0, 0, 0, 0},
+                {0, 1, 1, 1, 0},
+                {0, 1, 2, 1, 0},
+                {0, 1, 1, 1, 0},
+                {0, 0, 0, 0, 0}
+        };
+        assertThat(subject.findAPeak(array));
+    }
+
+    @Test
+    void test2d_2() {
+        int[][] array = new int[][] {
+                {0, 0, 0, 0, 0},
+                {1, 1, 1, 0, 0},
+                {2, 1, 1, 0, 0},
+                {1, 1, 1, 0, 0},
+                {0, 0, 0, 0, 0}
+        };
+        assertThat(subject.findAPeak(array));
+    }
+
 }
