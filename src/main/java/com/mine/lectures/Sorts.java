@@ -25,7 +25,7 @@ public class Sorts {
 		return array;
 	}
 
-	public int[] merge(int[] a, int[] b) {
+	private int[] merge(int[] a, int[] b) {
 		int[] result = new int[a.length + b.length];
 		int i = 0, j = 0, k = 0;
 		while (i < a.length && j < b.length) {
@@ -42,5 +42,27 @@ public class Sorts {
 			result[k++] = b[j++];
 		}
 		return result;
+	}
+
+	public int[] heap(int[] array) {
+		return null;
+	}
+
+	public void heapify(int[] array, int i) {
+		int left = 2 * i + 1;
+		int largest = i;
+		if (left < array.length && array[left] > array[largest]) {
+			largest = left;
+		}
+		int right = 2 * i + 2;
+		if (right < array.length && array[right] > array[largest]) {
+			largest = right;
+		}
+		if (i != largest) {
+			int tmp = array[largest];
+			array[largest] = array[i];
+			array[i] = tmp;
+			heapify(array, largest);
+		}
 	}
 }
