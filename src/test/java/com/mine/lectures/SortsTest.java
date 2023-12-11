@@ -62,6 +62,4 @@ class SortsTest {
 		assertThat(result).containsExactly(1, 2, 4);
 	}
 
-
-
 }
