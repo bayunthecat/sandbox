@@ -1,5 +1,8 @@
-package com.mine.lectures;
+package com.mine.lectures.sort;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
 public class Counting {
 
 	int[] sortAlt(int[] input) {

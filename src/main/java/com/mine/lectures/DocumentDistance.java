@@ -1,5 +1,7 @@
 package com.mine.lectures;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Arrays;
@@ -8,6 +10,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+@ApplicationScoped
 public class DocumentDistance {
 
 	public double distance(String doc, String anotherDoc) {

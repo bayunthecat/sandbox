@@ -1,5 +1,8 @@
 package com.mine.lectures;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
 public class PeakFinder {
 
 	public int findAPeakRecursive(int[] array) {

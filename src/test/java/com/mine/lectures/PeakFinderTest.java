@@ -1,12 +1,17 @@
 package com.mine.lectures;
 
+import io.quarkus.test.junit.QuarkusTest;
+import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
+
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@QuarkusTest
 class PeakFinderTest {
 
-	PeakFinder subject = new PeakFinder();
+	@Inject
+	PeakFinder subject;
 
 	@Test
 	void test_1_1() {

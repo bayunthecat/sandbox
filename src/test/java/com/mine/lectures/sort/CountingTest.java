@@ -1,12 +1,16 @@
-package com.mine.lectures;
+package com.mine.lectures.sort;
 
+import io.quarkus.test.junit.QuarkusTest;
+import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@QuarkusTest
 class CountingTest {
 
-	Counting countingSort = new Counting();
+	@Inject
+	Counting countingSort;
 
 	@Test
 	void test_1() {

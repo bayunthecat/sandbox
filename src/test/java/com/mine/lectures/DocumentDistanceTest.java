@@ -1,5 +1,7 @@
 package com.mine.lectures;
 
+import io.quarkus.test.junit.QuarkusTest;
+import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
@@ -9,9 +11,11 @@ import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class DocumentDistanceTest {
+@QuarkusTest
+public class DocumentDistanceTest {
 
-	DocumentDistance distance = new DocumentDistance();
+	@Inject
+	DocumentDistance distance;
 
 	@Test
 	void test() {

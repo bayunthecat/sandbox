@@ -1,4 +1,4 @@
-package com.mine.lectures;
+package com.mine.lectures.sort;
 
 import jakarta.enterprise.context.ApplicationScoped;
 
