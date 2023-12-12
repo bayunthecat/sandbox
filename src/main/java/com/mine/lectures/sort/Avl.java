@@ -29,23 +29,24 @@ public class Avl {
 			node.right = insert(key, node.right);
 		}
 		node.height = 1 + Math.max(height(node.left), height(node.right));
+		node = balance(node);
+		System.out.printf("Visiting node %s, inserting %s, height %s%n", node.key, key, node.height);
+		return node;
+	}
+
+	private Node balance(Node node) {
 		int balanceFactor = balanceFactor(node);
 		if (balanceFactor > 1) {
-			if (balanceFactor(node.left) > 0) {
-				node = right(node);
-			} else {
+			if (balanceFactor(node.left) <= 0) {
 				node.left = left(node.left);
-				node = right(node);
 			}
+			node = right(node);
 		} else if (balanceFactor < -1) {
-			if (balanceFactor(node.right) < 0) {
-				node = left(node);
-			} else {
+			if (balanceFactor(node.right) >= 0) {
 				node.right = right(node.right);
-				node = left(node);
 			}
+			node = left(node);
 		}
-		System.out.printf("Visiting node %s, inserting %s, height %s%n", node.key, key, node.height);
 		return node;
 	}
 
