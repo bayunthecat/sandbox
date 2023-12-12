@@ -2,7 +2,7 @@ package com.mine.lectures;
 
 public class Counting {
 
-	int[] sort(int[] input) {
+	int[] sortAlt(int[] input) {
 		int[] prefixSum = new int[10];
 		for (int num : input) {
 			prefixSum[num] += 1;
@@ -16,6 +16,22 @@ public class Counting {
 			int position = prefixSum[num];
 			output[position - 1] = num;
 			prefixSum[num] -= 1;
+		}
+		return output;
+	}
+
+	int[] sort(int[] input, int maxValue) {
+		int[] counts = new int[maxValue + 1];
+		for (int num : input) {
+			counts[num] += 1;
+		}
+		int[] output = new int[input.length];
+		int k = 0;
+		for (int i = 0; i < counts.length; i++) {
+			int count = counts[i];
+			for (int j = 0; j < count; j++) {
+				output[k++] = i;
+			}
 		}
 		return output;
 	}
