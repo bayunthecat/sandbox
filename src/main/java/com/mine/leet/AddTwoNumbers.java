@@ -1,7 +1,9 @@
 package com.mine.leet;
 
 import com.mine.leet.util.ListNode;
+import jakarta.enterprise.context.ApplicationScoped;
 
+@ApplicationScoped
 public class AddTwoNumbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

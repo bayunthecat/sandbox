@@ -1,15 +1,17 @@
 package com.mine.leet;
 
-import com.mine.leet.AddTwoNumbers;
 import com.mine.leet.util.ListNode;
+import io.quarkus.test.junit.QuarkusTest;
+import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@QuarkusTest
 class AddTwoNumbersTest {
 
-    private AddTwoNumbers subject = new AddTwoNumbers();
-
+    @Inject
+    AddTwoNumbers subject ;
 
     @Test
     void test_1() {

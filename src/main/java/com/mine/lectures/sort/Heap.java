@@ -6,7 +6,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 public class Heap {
 
 	public int[] sort(int[] array) {
-		array = buildHeap(array);
+		buildHeap(array);
 		for (int i = array.length - 1; i >= 0; i--) {
 			int tmp = array[0];
 			array[0] = array[i];
@@ -16,10 +16,9 @@ public class Heap {
 		return array;
 	}
 
-	private int[] buildHeap(int[] array) {
+	private void buildHeap(int[] array) {
 		for (int i = array.length / 2 - 1; i >= 0; i--)
 			heapify(array, array.length, i);
-		return array;
 	}
 
 	private void heapify(int[] array, int length, int i) {

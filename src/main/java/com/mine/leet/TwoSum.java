@@ -1,7 +1,10 @@
 package com.mine.leet;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
 import java.util.HashMap;
 
+@ApplicationScoped
 public class TwoSum {
 
     public int[] twoSum(int[] nums, int target) {
