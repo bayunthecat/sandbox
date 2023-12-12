@@ -1,11 +1,9 @@
 package com.mine.lectures.sort;
 
-import com.mine.lectures.sort.Avl;
 import io.quarkus.test.junit.QuarkusTest;
+import jakarta.inject.Inject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import jakarta.inject.Inject;;
 
 @QuarkusTest
 class AvlTest {
