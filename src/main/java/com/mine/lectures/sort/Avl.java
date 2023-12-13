@@ -30,7 +30,6 @@ public class Avl {
 		}
 		node.height = 1 + Math.max(height(node.left), height(node.right));
 		node = balance(node);
-		System.out.printf("Visiting node %s, inserting %s, height %s%n", node.key, key, node.height);
 		return node;
 	}
 
