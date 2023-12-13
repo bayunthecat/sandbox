@@ -22,13 +22,15 @@ public class MergeTwoSortedLists {
         } while (l1 != null && l2 != null);
         ListNode l1Remaining = l1;
         while (l1Remaining != null) {
-            next.next = new ListNode(l1.val);
-            l1Remaining = l1.next;
+            next.next = new ListNode(l1Remaining.val);
+            l1Remaining = l1Remaining.next;
+            next = next.next;
         }
         ListNode l2Remaining = l2;
         while (l2Remaining != null) {
-            next.next = new ListNode(l2.val);
-            l2Remaining = l2.next;
+            next.next = new ListNode(l2Remaining.val);
+            l2Remaining = l2Remaining.next;
+            next = next.next;
         }
         return head.next;
     }

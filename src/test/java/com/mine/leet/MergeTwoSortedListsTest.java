@@ -50,6 +50,13 @@ class MergeTwoSortedListsTest {
         assertThat(resultArray).containsExactly();
     }
 
+    @Test
+    void test_6() {
+        final var result = subject.mergeTwoLists(list(new int[]{-9, 3}), list(new int[]{5, 7}));
+        final var resultArray = array(result);
+        assertThat(resultArray).containsExactly(-9, 3, 5, 7);
+    }
+
     private int[] array(MergeTwoSortedLists.ListNode node) {
         List<Integer> list = new ArrayList<>();
         while (node != null) {
