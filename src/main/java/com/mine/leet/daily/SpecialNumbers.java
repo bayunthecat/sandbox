@@ -14,13 +14,13 @@ public class SpecialNumbers {
 				if (mat[i][j] == 1) {
 					byRows[i]++;
 					byColumns[j]++;
-					if (byRows[i] == 1 && byColumns[j] == 1) {
-						result++;
-					} else if (byRows[i] == 2 && byColumns[i] <= 1) {
-						result--;
-					} else if (byColumns[j] == 2 && byRows[j] <= 1) {
-						result--;
-					}
+				}
+			}
+		}
+		for (int i = 0; i < byRows.length; i++) {
+			for (int j = 0; j < byColumns.length; j++) {
+				if (mat[i][j] == 1 && byRows[i] == 1 && byColumns[j] == 1) {
+					result++;
 				}
 			}
 		}

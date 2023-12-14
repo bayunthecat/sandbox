@@ -76,4 +76,20 @@ class SpecialNumbersTest {
 		final var result = specialNumbers.numSpecial(input);
 		assertThat(result).isEqualTo(2);
 	}
+
+	@Test
+	void test_7() {
+		int[][] input = new int[][]{
+				{0, 0, 0, 0},
+				{1, 0, 1, 0},
+				{0, 1, 0, 0},
+				{0, 1, 0, 0},
+				{0, 0, 0, 0},
+				{0, 0, 0, 0},
+				{0, 0, 0, 0},
+				{0, 1, 0, 0}
+		};
+		final var result = specialNumbers.numSpecial(input);
+		assertThat(result).isEqualTo(0);
+	}
 }
