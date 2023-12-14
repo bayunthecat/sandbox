@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @QuarkusTest
-class SolutionTest {
+class SpecialNumbersTest {
 
 	@Inject
 	SpecialNumbers specialNumbers;
@@ -50,5 +50,30 @@ class SolutionTest {
 				{0, 0, 0}};
 		final var result = specialNumbers.numSpecial(input);
 		assertThat(result).isEqualTo(0);
+	}
+
+	@Test
+	void test_5() {
+		int[][] input = new int[][]{
+				{0, 0, 0, 0, 0, 1, 0, 0},
+				{0, 0, 0, 0, 1, 0, 0, 1},
+				{0, 0, 0, 0, 1, 0, 0, 0},
+				{1, 0, 0, 0, 1, 0, 0, 0},
+				{0, 0, 1, 1, 0, 0, 0, 0}
+		};
+		final var result = specialNumbers.numSpecial(input);
+		assertThat(result).isEqualTo(1);
+	}
+
+	@Test
+	void test_6() {
+		int[][] input = new int[][]{
+				{1, 0, 0, 0},
+				{0, 1, 1, 0},
+				{0, 1, 1, 0},
+				{0, 0, 0, 1}
+		};
+		final var result = specialNumbers.numSpecial(input);
+		assertThat(result).isEqualTo(2);
 	}
 }
