@@ -1,4 +1,4 @@
-package com.mine.leet.ace75;
+package com.mine.leet.ace75.array;
 
 import jakarta.enterprise.context.ApplicationScoped;
 
