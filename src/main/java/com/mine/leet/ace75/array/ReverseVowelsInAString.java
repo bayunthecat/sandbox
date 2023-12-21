@@ -8,19 +8,20 @@ public class ReverseVowelsInAString {
 	public String reverseVowels(String s) {
 		char[] str = s.toCharArray();
 		int j = s.length() - 1;
-		for (int i = 0; i < j; i++) {
-			char front = str[i];
-			if (!isVowel(front)) {
-				continue;
+		int i = 0;
+		while (i < j) {
+			while (!isVowel(str[i]) && i < j) {
+				i++;
 			}
-			for (; j > i; j--) {
-				char back = str[j];
-				if (isVowel(back)) {
-					str[i] = back;
-					str[j] = front;
-					j--;
-					break;
-				}
+			while (!isVowel(str[j]) && j > i) {
+				j--;
+			}
+			if (i < j) {
+				char tmp = str[i];
+				str[i] = str[j];
+				str[j] = tmp;
+				i++;
+				j--;
 			}
 		}
 		return new String(str);

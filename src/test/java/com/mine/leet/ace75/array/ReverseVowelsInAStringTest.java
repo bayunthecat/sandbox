@@ -36,4 +36,12 @@ class ReverseVowelsInAStringTest {
 		assertThat(result).isEqualTo("Aa");
 	}
 
+	@Test
+	void test_5() {
+		final var result = reverseVowelsInAString.reverseVowels(".,");
+		assertThat(result).isEqualTo(".,");
+	}
+
+
+
 }
