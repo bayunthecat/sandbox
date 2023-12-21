@@ -4,6 +4,8 @@ import io.quarkus.test.junit.QuarkusTest;
 import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @QuarkusTest
 class FindTheDifferenceOfTwoArrayTest {
 
@@ -12,8 +14,9 @@ class FindTheDifferenceOfTwoArrayTest {
 
 	@Test
 	void test() {
-		final var result = subject.findDifference(new int[]{1, 2, 3, 3}, new int[]{1, 1, 2, 2});
-		System.out.println(result);
+		final var result = subject.findDifference(new int[]{1, 2, 3}, new int[]{2, 4, 6});
+		assertThat(result.get(0)).containsExactlyInAnyOrder(1, 3);
+		assertThat(result.get(1)).containsExactlyInAnyOrder(4, 6);
 	}
 
 }
