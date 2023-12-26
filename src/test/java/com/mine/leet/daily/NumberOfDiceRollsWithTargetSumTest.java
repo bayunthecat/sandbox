@@ -25,12 +25,6 @@ class NumberOfDiceRollsWithTargetSumTest {
 	}
 
 	@Test
-	void test_2_memo() {
-		final var result1 = subject.numRollsToTarget(3, 6, 8);
-		assertThat(result1).isEqualTo(21);
-	}
-
-	@Test
 	void test_3() {
 		final var result = subject.numRollsToTarget(3, 6, 150);
 		assertThat(result).isEqualTo(0);
