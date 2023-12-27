@@ -2,39 +2,26 @@ package com.mine.leet.daily;
 
 import jakarta.enterprise.context.ApplicationScoped;
 
-import java.util.Arrays;
-
 @ApplicationScoped
 public class MinimumTimeToMakeRopeColorful {
 
 	public int minCost(String colors, int[] neededTime) {
-		char prev = '\u0000', current;
-		int result = 0;
-		int from = -1;
+		char current;
+		int result = 0, maxLocal = 0;
 		for (int i = 0; i < colors.length(); i++) {
 			current = colors.charAt(i);
-			if (prev == current) {
-				if (from == -1) {
-					from = i - 1;
+			if (i < colors.length() - 1 && colors.charAt(i + 1) == current) {
+				result += neededTime[i];
+				maxLocal = Math.max(maxLocal, neededTime[i]);
+			} else {
+				if (maxLocal != 0) {
+					result += neededTime[i];
+					maxLocal = Math.max(maxLocal, neededTime[i]);
 				}
-			} else if (from != -1) {
-				result += minTime(neededTime, from, i);
-				from = -1;
+				result -= maxLocal;
+				maxLocal = 0;
 			}
-			prev = current;
-		}
-		if (from != -1) {
-			result += minTime(neededTime, from, colors.length());
 		}
 		return result;
-	}
-
-	private int minTime(int[] neededTime, int from, int to) {
-		int minTime = 0;
-		Arrays.sort(neededTime, from, to);
-		for (int i = from; i < to - 1; i++) {
-			minTime += neededTime[i];
-		}
-		return minTime;
 	}
 }
