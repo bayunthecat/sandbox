@@ -1,9 +1,10 @@
 package com.mine.leet.ace75.array;
 
+import com.mine.exam.Problem;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-public class GreatestCommonDivisorOfStrings {
+public class GreatestCommonDivisorOfStrings implements Problem {
 
     public String gcdOfStrings(String str1, String str2) {
         if (!(str2 + str1).equals(str1 + str2)) {
