@@ -27,7 +27,7 @@ class MinimumChangesToAlteringBinaryStringTest {
     @Test
     void test_3() {
         final var result = subject.minOperations("10");
-        assertThat(result).isEqualTo(2);
+        assertThat(result).isEqualTo(0);
     }
 
 }
