@@ -33,7 +33,7 @@ class DecodeWaysTest {
     @Test
     void test_4() {
         final var result = subject.numDecodings("110612");
-        assertThat(result).isEqualTo(8);
+        assertThat(result).isEqualTo(2);
     }
 
     @Test
