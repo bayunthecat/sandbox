@@ -1,6 +1,6 @@
 package com.mine.leet;
 
-import com.mine.leet.util.ListNode;
+import com.mine.util.ListNode;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped

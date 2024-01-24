@@ -1,6 +1,6 @@
 package com.mine.leet.ace75.linkedlist;
 
-import com.mine.leet.util.ListNode;
+import com.mine.util.ListNode;
 import io.quarkus.test.junit.QuarkusTest;
 import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
