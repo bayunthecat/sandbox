@@ -2,10 +2,8 @@ package com.mine.leet.ace75.graph;
 
 import jakarta.enterprise.context.ApplicationScoped;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Set;
 
 @ApplicationScoped
 public class RottingOranges {
@@ -30,7 +28,7 @@ public class RottingOranges {
 			return oranges == 0 ? 0 : -1;
 		}
 		int minutes = -1;
-		Set<Point> seen = new HashSet<>();
+		boolean[][] seen = new boolean[xLength][yLength];
 		while (queue.size() != 0 && oranges != 0) {
 			int length = queue.size();
 			for (int i = 0; i < length; i++) {
@@ -41,10 +39,10 @@ public class RottingOranges {
 				if (p.x < 0 || p.x >= xLength || p.y < 0 || p.y >= yLength) {
 					continue;
 				}
-				if (seen.contains(p)) {
+				if (seen[p.x][p.y]) {
 					continue;
 				}
-				seen.add(p);
+				seen[p.x][p.y] = true;
 				if (grid[p.x][p.y] == 2 || grid[p.x][p.y] == 1) {
 					grid[p.x][p.y] = 2;
 					oranges--;
@@ -71,23 +69,6 @@ public class RottingOranges {
 		@Override
 		public String toString() {
 			return String.format("(x: %s, y: %s)", x, y);
-		}
-
-		@Override
-		public boolean equals(Object obj) {
-			if (obj == null) {
-				return false;
-			}
-			if (!(obj instanceof Point another)) {
-				return false;
-			}
-			return x == another.x && y == another.y;
-		}
-
-		@Override
-		public int hashCode() {
-			int prime = 31;
-			return prime * x + prime * y;
 		}
 	}
 }
