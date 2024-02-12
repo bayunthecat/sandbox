@@ -1,6 +1,6 @@
 package com.mine.practice.fundamentals.structures;
 
-public interface LinkedList<T> {
+public interface CustomLinkedList<T> {
 
 	T get(int index);
 
